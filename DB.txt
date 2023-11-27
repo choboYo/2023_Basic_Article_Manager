@@ -9,3 +9,20 @@ CREATE TABLE article(
 	title VARCHAR(100) NOT NULL,
 	`body` TEXT NOT NULL
 );
+
+INSERT INTO article
+SET regDate = NOW(),
+updateDate = NOW(),
+title = '제목2',
+`body` = '내용2';
+
+SELECT * FROM article;
+
+TRUNCATE article; 딜리트의 상위계념으로 테이블자체를 리셋시키는 명령어이다.
+
+SELECT * 
+FROM article 
+INNER(left, Light) JOIN `member`
+ON article.memberId = `member`.id;
+
+정규화 모델링

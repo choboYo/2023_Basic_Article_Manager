@@ -38,5 +38,12 @@ public class MemberDao {
 		
 		return DBUtil.selectRow(conn, sql);
 	}
+	
+	public Map<String, Object> getMemberchkLoginName(String name) {
+		SecSql sql = SecSql.from("SELECT * FROM `member`");
+		sql.append("WHERE name = ?", name);
+		
+		return DBUtil.selectRow(conn, sql);
+	}
 
 }

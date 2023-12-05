@@ -38,10 +38,12 @@ public class App {
 					memberController.doLogin();
 				} else if (cmd.equals("member logout")) {
 					memberController.doLogout();
+				} else if (cmd.equals("member profile")) {
+					memberController.showProfile();
 				} else if (cmd.equals("article write")) {
 					articleController.doWrite();
-				} else if (cmd.equals("article list")) {
-					articleController.showList();
+				} else if (cmd.startsWith("article list")) {
+					articleController.showList(cmd);
 				} else if (cmd.startsWith("article detail ")) {
 					articleController.showDetail(cmd);
 				} else if (cmd.startsWith("article modify ")) {
